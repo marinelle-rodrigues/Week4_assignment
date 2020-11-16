@@ -1,0 +1,23 @@
+A description of the variables used in the code
+url: source of the original "untidy" dataset
+------------------------------------------------------------
+all the files are read into these variables
+labels<-read.table("activity_labels.txt")
+features<-read.table("features.txt")
+trainsub<-read.table("./train/subject_train.txt")
+featrain<-read.table("./train/X_train.txt")
+activtrain<-read.table("./train/y_train.txt")
+testsub<-read.table("./test/subject_test.txt")
+featest<-read.table("./test/X_test.txt")
+activtest<-read.table("./test/y_test.txt")
+
+-----------------------------------------------------------
+
+First testdata and traindata were merged to create mergedata.
+Only columns containing mean,std,activity and subject weere used in the dataframe "newerdata"
+
+-------------------------------------------------------------
+
+Some column names were modified for readability
+
+Finally, data was organized by subject and activity and the finaldata file was written into a tidydata text file.
